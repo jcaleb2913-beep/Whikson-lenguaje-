@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WHIKSON — Gramática y Diccionario</title>
+<style>
+:root{--bg:#0c1115;--panel:#151d23;--panel2:#1b252c;--gold:#d6ad63;--cream:#eee4d1;--muted:#aab4ba;--line:#ffffff14}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 15% 0,#30423455,transparent 32%),var(--bg);color:var(--cream);font-family:Georgia,serif;line-height:1.65}
+header{min-height:72vh;display:grid;place-items:center;text-align:center;padding:50px 20px;background:linear-gradient(#0002,#0008)}
+.hero{max-width:950px}.eyebrow{text-transform:uppercase;letter-spacing:.35em;color:var(--gold);font:700 .75rem Arial}
+h1{font:700 clamp(4rem,13vw,9rem)/.9 Georgia;margin:20px 0;color:var(--cream);letter-spacing:.06em}
+h2{color:var(--gold);font-size:2rem;margin-top:0}h3{color:#e6d4ad}.tag{font-size:1.3rem;color:var(--muted);max-width:700px;margin:25px auto}
+nav{position:sticky;top:0;z-index:5;background:#0c1115ee;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:12px;display:flex;gap:8px;overflow:auto;justify-content:center}
+nav a{color:var(--cream);text-decoration:none;border:1px solid var(--line);border-radius:20px;padding:5px 12px;white-space:nowrap;font:13px Arial}
+main{max-width:1150px;margin:auto;padding:45px 20px 80px}section{margin:65px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:15px}.card{background:linear-gradient(145deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 25px #0004}
+table{width:100%;border-collapse:collapse;background:var(--panel);border-radius:14px;overflow:hidden}th,td{text-align:left;padding:11px;border-bottom:1px solid var(--line)}th{color:var(--gold)}
+.code{background:#090d10;border-left:4px solid var(--gold);padding:18px 22px;font-size:1.15rem}.small{color:var(--muted);font-size:.95rem}.badge{display:inline-block;border:1px solid #ffffff22;padding:4px 9px;border-radius:20px;margin:3px;color:var(--gold);font:12px Arial}
+footer{text-align:center;border-top:1px solid var(--line);padding:30px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><div class="hero">
+<div class="eyebrow">Whikson Language Project</div>
+<h1>WHIKSON</h1>
+<p class="tag">La lengua de las montañas. Un idioma ficticio del norte y del interior de Inglaterra, con raíces propias e influencias inglesas y germánicas.</p>
+<span class="badge">Lengua ficticia</span><span class="badge">Gramática en construcción</span><span class="badge">Variante montañesa</span>
+</div></header>
+
+<nav>
+<a href="#origen">Origen</a><a href="#alfabeto">Alfabeto</a><a href="#sonidos">Sonidos</a><a href="#sust">Sustantivos</a><a href="#adj">Adjetivos</a><a href="#verbos">Verbos</a><a href="#pron">Pronombres</a><a href="#adv">Adverbios</a><a href="#frases">Frases</a><a href="#dic">Diccionario</a>
+</nav>
+
+<main>
+<section id="origen"><h2>1. Identidad del Whikson</h2>
+<p>El Whikson es una lengua ficticia conservada principalmente en zonas montañosas e interiores del norte de Inglaterra. Su vocabulario es independiente del inglés, aunque ha recibido préstamos. También presenta influencias germánicas.</p>
+<div class="grid"><div class="card"><h3>Regla I/O</h3><p>Las letras <b>i</b> y <b>o</b> pueden desaparecer en determinadas palabras, pero no de forma automática.</p></div><div class="card"><h3>La K</h3><p>La <b>k</b> es muy frecuente, especialmente al final de palabras y en algunos derivados.</p></div><div class="card"><h3>Préstamos</h3><p>Inglés y alemán aportan algunas raíces, pero la gramática y evolución son propias del Whikson.</p></div></div></section>
+
+<section id="alfabeto"><h2>2. Abecedario Whikson</h2>
+<p>Alfabeto base de 26 letras, con algunas grafías especiales para préstamos y dialectos.</p>
+<table><tr><th>Mayúscula</th><th>Minúscula</th><th>Nombre aproximado</th></tr>
+<tr><td>A</td><td>a</td><td>a</td></tr><tr><td>B</td><td>b</td><td>be</td></tr><tr><td>C</td><td>c</td><td>ke</td></tr><tr><td>D</td><td>d</td><td>de</td></tr><tr><td>E</td><td>e</td><td>e</td></tr><tr><td>F</td><td>f</td><td>ef</td></tr><tr><td>G</td><td>g</td><td>ge</td></tr><tr><td>H</td><td>h</td><td>ha</td></tr><tr><td>I</td><td>i</td><td>i</td></tr><tr><td>J</td><td>j</td><td>ye</td></tr><tr><td>K</td><td>k</td><td>ka</td></tr><tr><td>L</td><td>l</td><td>el</td></tr><tr><td>M</td><td>m</td><td>em</td></tr><tr><td>N</td><td>n</td><td>en</td></tr><tr><td>O</td><td>o</td><td>o</td></tr><tr><td>P</td><td>p</td><td>pe</td></tr><tr><td>Q</td><td>q</td><td>ku</td></tr><tr><td>R</td><td>r</td><td>er</td></tr><tr><td>S</td><td>s</td><td>es</td></tr><tr><td>T</td><td>t</td><td>te</td></tr><tr><td>U</td><td>u</td><td>u</td></tr><tr><td>V</td><td>v</td><td>ve</td></tr><tr><td>W</td><td>w</td><td>we</td></tr><tr><td>X</td><td>x</td><td>eks</td></tr><tr><td>Y</td><td>y</td><td>i/ye</td></tr><tr><td>Z</td><td>z</td><td>zet</td></tr></table>
+<p class="small">Vocales: A, E, I, O, U. En palabras antiguas también pueden aparecer ä, ö y ü por influencia germánica.</p></section>
+
+<section id="sonidos"><h2>3. Pronunciación y ortografía</h2>
+<div class="grid">
+<div class="card"><h3>K</h3><p>Sonido fuerte /k/. Es uno de los rasgos más reconocibles.</p></div>
+<div class="card"><h3>CH</h3><p>Puede representar un sonido áspero en préstamos germánicos.</p></div>
+<div class="card"><h3>W</h3><p>Se conserva con frecuencia en palabras de origen norteño.</p></div>
+<div class="card"><h3>Vocales</h3><p>Las vocales pueden reducirse en habla rápida.</p></div>
+</div></section>
+
+<section id="pron"><h2>4. Pronombres personales</h2>
+<table><tr><th>Español</th><th>Whikson</th></tr><tr><td>Yo</td><td>Ik</td></tr><tr><td>Tú</td><td>Du</td></tr><tr><td>Él</td><td>He</td></tr><tr><td>Ella</td><td>She</td></tr><tr><td>Nosotros</td><td>Wir</td></tr><tr><td>Ustedes</td><td>Ihr</td></tr><tr><td>Ellos</td><td>De</td></tr></table></section>
+
+<section id="sust"><h2>5. Sustantivos</h2>
+<p>Los sustantivos nombran personas, animales, objetos, lugares e ideas. El plural puede formarse con <b>-k</b> en palabras nativas, aunque existen plurales irregulares.</p>
+<table><tr><th>Singular</th><th>Plural</th><th>Español</th></tr>
+<tr><td>Dogsh</td><td>Dogshk</td><td>perro / perros</td></tr><tr><td>Personk</td><td>Personken</td><td>persona / personas</td></tr><tr><td>Hause</td><td>Hausen</td><td>casa / casas</td></tr><tr><td>Bergk</td><td>Bergken</td><td>montaña / montañas</td></tr></table></section>
+
+<section id="adj"><h2>6. Adjetivos</h2>
+<p>Normalmente aparecen después del sustantivo.</p>
+<div class="grid"><div class="card"><b>Gross</b> — grande</div><div class="card"><b>Klein</b> — pequeño</div><div class="card"><b>Gut</b> — bueno</div><div class="card"><b>Schlecht</b> — malo</div><div class="card"><b>Schnell</b> — rápido</div><div class="card"><b>Langsam</b> — lento</div><div class="card"><b>Stark</b> — fuerte</div><div class="card"><b>Schön</b> — bonito</div></div>
+<div class="code">Hause gross. → Casa grande.<br>Dogsh schnell. → Perro rápido.</div></section>
+
+<section id="verbos"><h2>7. Verbos</h2>
+<p>Forma base de los verbos y sistema sencillo de tiempo.</p>
+<table><tr><th>Español</th><th>Infinitivo/base</th><th>Ejemplo</th></tr>
+<tr><td>ser/estar</td><td>sin</td><td>Ik sin gut.</td></tr><tr><td>tener</td><td>hav</td><td>Ik hav Hause.</td></tr><tr><td>ir</td><td>geit</td><td>Ik geit.</td></tr><tr><td>comer</td><td>essk</td><td>Ik essk.</td></tr><tr><td>beber</td><td>drinkt</td><td>Ik drinkt Vassa.</td></tr><tr><td>ver</td><td>seht</td><td>Ik seht Dogsh.</td></tr><tr><td>hablar</td><td>spreck</td><td>Ik spreck Whikson.</td></tr><tr><td>trabajar</td><td>wörk</td><td>Wir wörk.</td></tr></table>
+<p class="small">Convención provisional: presente sin una terminación personal compleja; el contexto y los pronombres indican quién realiza la acción.</p></section>
+
+<section><h2>8. Tiempos verbales</h2>
+<div class="grid"><div class="card"><h3>Presente</h3><p>Ik geit — Yo voy.</p></div><div class="card"><h3>Pasado</h3><p>Ik geitd — Yo fui.</p></div><div class="card"><h3>Futuro</h3><p>Ik vil geit — Yo iré.</p></div></div></section>
+
+<section id="adv"><h2>9. Adverbios</h2>
+<table><tr><th>Español</th><th>Whikson</th></tr><tr><td>hoy</td><td>Todag</td></tr><tr><td>mañana</td><td>Morgen</td></tr><tr><td>ayer</td><td>Gestern</td></tr><tr><td>aquí</td><td>Hier</td></tr><tr><td>allí</td><td>Dort</td></tr><tr><td>ahora</td><td>Jetzt</td></tr><tr><td>después</td><td>Später</td></tr><tr><td>siempre</td><td>Immer</td></tr><tr><td>nunca</td><td>Nie</td></tr><tr><td>rápidamente</td><td>Schnellk</td></tr><tr><td>lentamente</td><td>Langsamk</td></tr></table></section>
+
+<section><h2>10. Preposiciones y conectores</h2>
+<div class="grid"><div class="card"><b>in</b> — en/dentro</div><div class="card"><b>auf</b> — sobre</div><div class="card"><b>mit</b> — con</div><div class="card"><b>von</b> — de/desde</div><div class="card"><b>zu</b> — hacia</div><div class="card"><b>und</b> — y</div><div class="card"><b>aber</b> — pero</div><div class="card"><b>weil</b> — porque</div><div class="card"><b>oder</b> — o</div><div class="card"><b>denn</b> — pues/porque</div></div></section>
+
+<section><h2>11. Negación</h2>
+<p>La negación usa <b>nok</b> antes del verbo.</p>
+<div class="code">Ik nok geit. → Yo no voy.<br>Du nok essk. → Tú no comes.</div></section>
+
+<section><h2>12. Preguntas</h2>
+<p>Las preguntas pueden comenzar con una palabra interrogativa o con el verbo.</p>
+<div class="code">Was du drinkt? → ¿Qué bebes?<br>Wo du geit? → ¿Adónde vas?<br>Du hav Dogsh? → ¿Tienes perro?</div></section>
+
+<section id="frases"><h2>13. Frases completas</h2>
+<div class="code">
+Dér Mannk geit zum Hause, drinkt Vassa und sieht den Dogsh am Fenster.<br>
+<span class="small">El hombre va a la casa, bebe agua y ve al perro en la ventana.</span><br><br>
+Ik spreck Whikson in den Bergken.<br>
+<span class="small">Yo hablo Whikson en las montañas.</span><br><br>
+Du hav ein gross Hause.<br>
+<span class="small">Tú tienes una casa grande.</span>
+</div></section>
+
+<section id="dic"><h2>14. Diccionario esencial</h2>
+<div class="grid">
+<div class="card"><b>Vassa</b><br>agua</div><div class="card"><b>Sodak</b><br>refresco</div><div class="card"><b>Tee</b><br>té</div><div class="card"><b>Fenster</b><br>ventana</div><div class="card"><b>Hause</b><br>casa</div><div class="card"><b>Camputéon</b><br>computadora</div><div class="card"><b>Tren</b><br>tren</div><div class="card"><b>Dogsh</b><br>perro</div><div class="card"><b>Personk</b><br>persona</div><div class="card"><b>Wörk</b><br>trabajo</div><div class="card"><b>Bergk</b><br>montaña</div><div class="card"><b>Wald</b><br>bosque</div><div class="card"><b>Frendk</b><br>amigo</div><div class="card"><b>Geld</b><br>dinero</div><div class="card"><b>Fried</b><br>paz</div><div class="card"><b>Kriegk</b><br>guerra</div></div></section>
+
+<section><h2>15. Nota lingüística</h2>
+<p>Estas reglas son una versión organizada y provisional del Whikson. Como idioma inventado, pueden cambiarse para que su historia, fonética y gramática sean cada vez más coherentes.</p></section>
+</main>
+
+<section id="sistema"><h2>16. Gramática avanzada</h2>
+<div class="grid">
+<div class="card"><h3>Artículos</h3><p><b>de</b> = el/la. <b>de-en</b> = los/las. Ejemplo: <b>de Hause</b> = la casa.</p></div>
+<div class="card"><h3>Género</h3><p>El Whikson no obliga a marcar género en todos los sustantivos. Cuando importa: <b>mann</b> masculino y <b>womank</b> femenino.</p></div>
+<div class="card"><h3>Orden</h3><p>Orden básico: <b>Sujeto + Verbo + Objeto</b>. Ejemplo: <b>Ik drinkt Vassa.</b></p></div>
+<div class="card"><h3>Plural</h3><p>Se usa <b>-k</b> o <b>-en</b> según la palabra. Los términos antiguos pueden conservar plurales irregulares.</p></div>
+</div></section>
+
+<section><h2>17. Comparaciones</h2>
+<table><tr><th>Español</th><th>Whikson</th></tr>
+<tr><td>grande</td><td>gross</td></tr><tr><td>más grande</td><td>mer gross</td></tr><tr><td>el más grande</td><td>de mest gross</td></tr>
+<tr><td>rápido</td><td>schnell</td></tr><tr><td>más rápido</td><td>mer schnell</td></tr><tr><td>el más rápido</td><td>de mest schnell</td></tr></table></section>
+
+<section><h2>18. Números</h2>
+<div class="grid">
+<div class="card"><b>0</b> — Null</div><div class="card"><b>1</b> — Ein</div><div class="card"><b>2</b> — Zwei</div><div class="card"><b>3</b> — Drei</div>
+<div class="card"><b>4</b> — Vier</div><div class="card"><b>5</b> — Fünf</div><div class="card"><b>6</b> — Seks</div><div class="card"><b>7</b> — Siben</div>
+<div class="card"><b>8</b> — Acht</div><div class="card"><b>9</b> — Neun</div><div class="card"><b>10</b> — Zehn</div><div class="card"><b>100</b> — Hundert</div>
+<div class="card"><b>1000</b> — Tausend</div><div class="card"><b>1.000.000</b> — Million</div>
+</div></section>
+
+<section><h2>19. Días y meses</h2>
+<table><tr><th>Español</th><th>Whikson</th></tr>
+<tr><td>Lunes</td><td>Montag</td></tr><tr><td>Martes</td><td>Dienstag</td></tr><tr><td>Miércoles</td><td>Mittwoch</td></tr><tr><td>Jueves</td><td>Donnerstag</td></tr><tr><td>Viernes</td><td>Freitag</td></tr><tr><td>Sábado</td><td>Samstag</td></tr><tr><td>Domingo</td><td>Sonntag</td></tr>
+<tr><td>Enero</td><td>Januar</td></tr><tr><td>Febrero</td><td>Februar</td></tr><tr><td>Marzo</td><td>März</td></tr><tr><td>Abril</td><td>April</td></tr><tr><td>Mayo</td><td>Mai</td></tr><tr><td>Junio</td><td>Juni</td></tr><tr><td>Julio</td><td>Juli</td></tr><tr><td>Agosto</td><td>August</td></tr><tr><td>Septiembre</td><td>September</td></tr><tr><td>Octubre</td><td>Oktober</td></tr><tr><td>Noviembre</td><td>November</td></tr><tr><td>Diciembre</td><td>Dezember</td></tr></table></section>
+
+<section><h2>20. Conjugación modelo</h2>
+<p>Para mantener el idioma sencillo, el verbo base permanece casi igual y el tiempo se marca con partículas.</p>
+<table><tr><th>Persona</th><th>Presente</th><th>Pasado</th><th>Futuro</th></tr>
+<tr><td>Ik</td><td>Ik geit</td><td>Ik geitd</td><td>Ik vil geit</td></tr>
+<tr><td>Du</td><td>Du geit</td><td>Du geitd</td><td>Du vil geit</td></tr>
+<tr><td>He/She</td><td>He geit</td><td>He geitd</td><td>He vil geit</td></tr>
+<tr><td>Wir</td><td>Wir geit</td><td>Wir geitd</td><td>Wir vil geit</td></tr>
+<tr><td>Ihr</td><td>Ihr geit</td><td>Ihr geitd</td><td>Ihr vil geit</td></tr>
+<tr><td>De</td><td>De geit</td><td>De geitd</td><td>De vil geit</td></tr></table></section>
+
+<section><h2>21. Frases cotidianas</h2>
+<div class="grid">
+<div class="card"><b>Hallok!</b><br>¡Hola!</div><div class="card"><b>Wie bist du?</b><br>¿Cómo estás?</div>
+<div class="card"><b>Ik sin gut.</b><br>Estoy bien.</div><div class="card"><b>Dank!</b><br>¡Gracias!</div>
+<div class="card"><b>Bitte.</b><br>Por favor / De nada.</div><div class="card"><b>Ik verstah nok.</b><br>No entiendo.</div>
+<div class="card"><b>Spräck langsam.</b><br>Habla despacio.</div><div class="card"><b>Bis morgen!</b><br>¡Hasta mañana!</div>
+</div></section>
+
+<section><h2>22. Modismos e insultos</h2>
+<div class="grid">
+<div class="card"><b>By the Berg!</b><br>¡Por la montaña! — sorpresa.</div>
+<div class="card"><b>Du dumk Dogsh.</b><br>Perro tonto. — insulto leve.</div>
+<div class="card"><b>Go to de Höll.</b><br>Vete al infierno.</div>
+<div class="card"><b>Cold as de Berg.</b><br>Frío como la montaña.</div>
+<div class="card"><b>Wörk like a Wolf.</b><br>Trabajar como un lobo.</div>
+</div></section>
+
+<section><h2>23. Dialectos</h2>
+<div class="grid">
+<div class="card"><h3>Montañés</h3><p>Conserva vocabulario antiguo y elimina más sonidos en habla rápida.</p></div>
+<div class="card"><h3>Interior</h3><p>Es la variante considerada estándar para esta construcción.</p></div>
+<div class="card"><h3>Urbano</h3><p>Recibe más préstamos ingleses y simplifica algunas palabras.</p></div>
+</div></section>
+
+<section><h2>24. Historia ficticia</h2>
+<p>Según la tradición inventada del Whikson, sus primeros hablantes vivían en comunidades aisladas de las montañas del norte de Inglaterra. El aislamiento permitió conservar formas antiguas, mientras el comercio introdujo palabras inglesas y germánicas. Con el crecimiento de las ciudades surgió una variante urbana más influida por el inglés.</p></section>
+
+<section><h2>25. Texto de ejemplo</h2>
+<div class="code">“Am Morgen, de Mannk geit aus de Hause. He drinkt Vassa, nimmt sein Bagk und geit zum Bergk. Am Abend, he returnt nach Hause und seht de Dogsh am Fenster.”<br><br>
+<span class="small">“Por la mañana, el hombre sale de la casa. Bebe agua, toma su bolso y va hacia la montaña. Por la tarde, regresa a casa y ve al perro en la ventana.”</span></div></section>
+
+<section><h2>26. Estado del idioma</h2>
+<p>El Whikson queda establecido como una lengua ficticia en desarrollo, con identidad geográfica, fonética, vocabulario, gramática básica, tiempos verbales, dialectos y tradición propia. Las reglas futuras deberán respetar estas bases para mantener coherencia.</p></section>
+
+
+<section id="cultura"><h2>27. Cultura Whikson</h2>
+<p>El idioma no existe aislado: el Whikson está ligado a las comunidades montañosas del norte de Inglaterra y a una tradición de pequeños pueblos, bosques, montañas y caminos antiguos.</p>
+<div class="grid">
+<div class="card"><h3>Saludo tradicional</h3><p><b>Hallok!</b> — Hola.</p></div>
+<div class="card"><h3>Despedida</h3><p><b>Bis morgen!</b> — Hasta mañana.</p></div>
+<div class="card"><h3>Respeto</h3><p><b>Dank, elder.</b> — Gracias, mayor/anciano.</p></div>
+<div class="card"><h3>Expresión</h3><p><b>By the Berg!</b> — ¡Por la montaña! Se usa ante una sorpresa.</p></div>
+</div></section>
+
+<section><h2>28. Palabras culturales sin traducción exacta</h2>
+<table><tr><th>Whikson</th><th>Significado</th></tr>
+<tr><td><b>Bergsha</b></td><td>Sensación de tranquilidad al estar solo en una montaña.</td></tr>
+<tr><td><b>Waldren</b></td><td>Nostalgia por un lugar al que se perteneció.</td></tr>
+<tr><td><b>Keldak</b></td><td>Amistad muy cercana formada desde la infancia.</td></tr>
+<tr><td><b>Vassren</b></td><td>Lluvia fría de montaña que llega inesperadamente.</td></tr>
+</table></section>
+
+<section><h2>29. Comida y bebida tradicional</h2>
+<div class="grid">
+<div class="card"><b>Vassbrot</b><br>Pan rústico servido con bebidas calientes.</div>
+<div class="card"><b>Bergsoup</b><br>Sopa espesa de verduras y raíces.</div>
+<div class="card"><b>Waldkake</b><br>Pastel tradicional de frutos del bosque.</div>
+<div class="card"><b>Tee</b><br>Té, una bebida cotidiana muy común.</div>
+</div></section>
+
+<section><h2>30. Fiestas y costumbres</h2>
+<p><b>Bergnacht</b> — “Noche de la Montaña”. Fiesta tradicional de invierno con fogatas, comida, música y relatos.</p>
+<p><b>Waldtag</b> — “Día del Bosque”. Celebración dedicada a los bosques y a la protección de la naturaleza.</p>
+<p><b>Vassfest</b> — celebración de la llegada de las lluvias después de una temporada seca.</p>
+</section>
+
+<section><h2>31. Registro formal e informal</h2>
+<table><tr><th>Situación</th><th>Forma</th></tr>
+<tr><td>Formal</td><td><b>Dank, elder.</b> — Gracias, señor/señora.</td></tr>
+<tr><td>Neutral</td><td><b>Dank!</b> — Gracias.</td></tr>
+<tr><td>Informal</td><td><b>Dank, frendk!</b> — ¡Gracias, amigo!</td></tr>
+<tr><td>Muy coloquial</td><td><b>Yo, hallok!</b> — ¡Ey, hola!</td></tr>
+</table></section>
+
+<section><h2>32. Jerga juvenil</h2>
+<div class="grid">
+<div class="card"><b>Wik!</b><br>¡Genial! / ¡Está bueno!</div>
+<div class="card"><b>Koolk</b><br>Genial, excelente.</div>
+<div class="card"><b>Bruk</b><br>Aburrido o sin gracia.</div>
+<div class="card"><b>Skik</b><br>Algo extraño o inesperado.</div>
+</div></section>
+
+<section><h2>33. Insultos y lenguaje coloquial</h2>
+<p>El lenguaje vulgar existe, pero no forma parte del registro formal.</p>
+<div class="grid">
+<div class="card"><b>Du dumk Dogsh!</b><br>¡Perro tonto!</div>
+<div class="card"><b>Go to de Höll!</b><br>¡Vete al infierno!</div>
+<div class="card"><b>Brukmannk!</b><br>¡Persona aburrida!</div>
+</div></section>
+
+<section><h2>34. Nombres tradicionales</h2>
+<div class="grid">
+<div class="card"><b>Hombres:</b> Edrik, Wendel, Kael, Brann, Torven.</div>
+<div class="card"><b>Mujeres:</b> Elska, Wynna, Kaela, Brenna, Freya.</div>
+<div class="card"><b>Apellidos:</b> Bergk, Waldren, Vassik, Keldan.</div>
+</div></section>
+
+<section><h2>35. Lugares Whikson</h2>
+<table><tr><th>Nombre</th><th>Tipo</th><th>Significado</th></tr>
+<tr><td>Bergheim</td><td>Pueblo</td><td>Hogar de la montaña.</td></tr>
+<tr><td>Waldkeld</td><td>Río</td><td>Agua del bosque.</td></tr>
+<tr><td>Haukberg</td><td>Montaña</td><td>Montaña del halcón.</td></tr>
+<tr><td>Vassendal</td><td>Valle</td><td>Valle del agua.</td></tr>
+</table></section>
+
+<section><h2>36. Refranes Whikson</h2>
+<div class="grid">
+<div class="card"><b>“Slow geit, far geit.”</b><br>Quien va despacio llega lejos.</div>
+<div class="card"><b>“De Berg waits for nok man.”</b><br>La montaña no espera a nadie.</div>
+<div class="card"><b>“A warm Tee warms de heart.”</b><br>Un té caliente calienta el corazón.</div>
+<div class="card"><b>“One Wolf nok makes de Wald.”</b><br>Un solo lobo no hace un bosque.</div>
+</div></section>
+
+<section><h2>37. Canción tradicional</h2>
+<div class="code">“Berg above, Wald below,<br>
+Vassa falls and winds still blow.<br>
+Whikson heart, strong and free,<br>
+Home is where de Bergk can be.”<br><br>
+<span class="small">“Montaña arriba, bosque abajo; cae el agua y sopla el viento. Corazón Whikson, fuerte y libre; hogar es donde está la montaña.”</span></div></section>
+
+<section><h2>38. Evolución del idioma</h2>
+<p>El Whikson ficticio se desarrolló a partir de una lengua antigua de comunidades montañosas. El aislamiento conservó estructuras propias; el contacto comercial incorporó préstamos ingleses y germánicos. Con el tiempo, las ciudades desarrollaron una variante urbana con más préstamos y las comunidades rurales conservaron pronunciaciones antiguas.</p>
+</section>
+
+<section><h2>39. Identidad del Whikson</h2>
+<p>El Whikson no busca ser una copia del inglés ni del alemán. Sus préstamos forman parte de su historia, pero su identidad se construye mediante sus propios sonidos, reglas, vocabulario, expresiones, cultura y evolución.</p>
+</section>
+
+
+<section><h2>40. El cerebro del Whikson: formación de palabras</h2>
+<p>Para que el idioma pueda crecer sin perder identidad, las palabras nuevas se forman a partir de raíces Whikson y reglas reconocibles. No se crean términos al azar.</p>
+<table><tr><th>Elemento</th><th>Función</th><th>Ejemplo</th></tr>
+<tr><td><b>-k</b></td><td>Marca una entidad, objeto o concepto concreto.</td><td>person → personk</td></tr>
+<tr><td><b>-sh</b></td><td>Puede identificar seres vivos o nombres tradicionales.</td><td>dog → dogsh</td></tr>
+<tr><td><b>-ak</b></td><td>Objeto, producto o cosa fabricada.</td><td>soda → sodak</td></tr>
+<tr><td><b>-en</b></td><td>Plural o conjunto cuando la palabra lo permite.</td><td>berg → bergen</td></tr>
+<tr><td><b>-sha</b></td><td>Concepto abstracto o sensación.</td><td>bergsha</td></tr>
+<tr><td><b>-ren</b></td><td>Relación, memoria o vínculo con un lugar/persona.</td><td>waldren</td></tr>
+</table></section>
+
+<section><h2>41. Composición</h2>
+<p>Dos raíces pueden combinarse para crear una palabra nueva. La primera raíz aporta la idea principal y la segunda la especifica.</p>
+<div class="grid">
+<div class="card"><b>Berg + heim = Bergheim</b><br>montaña + hogar = pueblo de montaña.</div>
+<div class="card"><b>Wald + keld = Waldkeld</b><br>bosque + agua = río del bosque.</div>
+<div class="card"><b>Vass + dal = Vassendal</b><br>agua + valle = valle del agua.</div>
+<div class="card"><b>Tee + haus = Teehaus</b><br>té + casa = casa de té.</div>
+</div></section>
+
+<section><h2>42. Crear palabras paso a paso</h2>
+<div class="code"><b>Concepto:</b> amistad<br>
+<b>Raíz:</b> frend<br>
+<b>Entidad concreta:</b> frendk<br>
+<b>Plural:</b> frenden<br><br>
+<b>Concepto:</b> tranquilidad de montaña<br>
+<b>Raíz:</b> berg<br>
+<b>Forma abstracta:</b> bergsha<br><br>
+<b>Concepto:</b> objeto relacionado con el agua<br>
+<b>Raíz:</b> vass<br>
+<b>Objeto:</b> vassak</div></section>
+
+<section><h2>43. Familias de palabras</h2>
+<table><tr><th>Raíz</th><th>Palabra</th><th>Significado</th></tr>
+<tr><td rowspan="4"><b>berg</b></td><td>berg</td><td>montaña</td></tr>
+<tr><td>bergk</td><td>entidad/lugar montañoso</td></tr>
+<tr><td>bergsha</td><td>calma de montaña</td></tr>
+<tr><td>bergheim</td><td>pueblo de montaña</td></tr>
+<tr><td rowspan="4"><b>vass</b></td><td>vassa</td><td>agua</td></tr>
+<tr><td>vassak</td><td>objeto relacionado con agua</td></tr>
+<tr><td>vassren</td><td>memoria vinculada al agua</td></tr>
+<tr><td>vassendal</td><td>valle del agua</td></tr>
+<tr><td rowspan="4"><b>wald</b></td><td>wald</td><td>bosque</td></tr>
+<tr><td>waldk</td><td>zona o lugar de bosque</td></tr>
+<tr><td>waldren</td><td>nostalgia por un lugar</td></tr>
+<tr><td>waldkeld</td><td>río del bosque</td></tr>
+</table></section>
+
+<section><h2>44. Préstamos extranjeros</h2>
+<p>El Whikson puede incorporar palabras inglesas o germánicas, pero las adapta cuando sea necesario. Un préstamo no debe desplazar automáticamente una palabra Whikson existente.</p>
+<p><b>Regla:</b> primero se busca una palabra propia; si el concepto pertenece a la tecnología, comercio o cultura externa, puede conservarse un préstamo adaptado.</p>
+<div class="grid">
+<div class="card"><b>computer → camputéon</b><br>préstamo adaptado.</div>
+<div class="card"><b>window → fenster</b><br>préstamo germánico integrado.</div>
+<div class="card"><b>train → tren</b><br>préstamo internacional adaptado.</div>
+</div></section>
+
+<section><h2>45. Regla de oro</h2>
+<p>Una palabra nueva del Whikson debe responder a tres preguntas: <b>¿de qué raíz viene?, ¿qué regla explica su forma?, ¿encaja con la pronunciación del idioma?</b> Si no puede responderse a las tres, la palabra se considera provisional.</p></section>
+
+<section><h2>46. Ejemplos de creación moderna</h2>
+<table><tr><th>Concepto</th><th>Whikson</th><th>Construcción</th></tr>
+<tr><td>teléfono</td><td>talek</td><td>tale + -k</td></tr>
+<tr><td>amistad</td><td>frendsha</td><td>frend + -sha</td></tr>
+<tr><td>escuela</td><td>skulhaus</td><td>skul + haus</td></tr>
+<tr><td>librería</td><td>bukhaus</td><td>buk + haus</td></tr>
+<tr><td>montañés</td><td>bergik</td><td>berg + -ik</td></tr>
+<tr><td>boscoso</td><td>waldik</td><td>wald + -ik</td></tr>
+<tr><td>amistoso</td><td>frendik</td><td>frend + -ik</td></tr>
+<tr><td>lluvioso</td><td>vassik</td><td>vass + -ik</td></tr>
+</table></section>
+
+<section><h2>47. Evolución y cambios de sonido</h2>
+<p>En el habla rápida, algunas <b>I</b> y <b>O</b> débiles pueden desaparecer. Esto es opcional y depende de la palabra, la región y la velocidad al hablar.</p>
+<div class="code">Formal: personk → habla rápida: persnk<br>
+Formal: camputéon → habla rápida: camptéon</div>
+<p>La escritura formal conserva la forma completa.</p></section>
+
+<section><h2>48. Diccionario ampliable</h2>
+<p>El diccionario oficial puede crecer por familias de palabras. Cada entrada nueva debe indicar su categoría, significado, raíz y regla de formación. Así el Whikson puede alcanzar miles de palabras manteniendo una estructura reconocible.</p>
+</section>
+
+
+<section><h2>49. El cuerpo humano</h2>
+<p>El Whikson también tiene un vocabulario propio para el cuerpo humano. Las palabras siguen las reglas fonéticas y de formación del idioma.</p>
+<table><tr><th>Español</th><th>Whikson</th></tr>
+<tr><td>cuerpo</td><td><b>lich</b></td></tr>
+<tr><td>cabeza</td><td><b>hauk</b></td></tr>
+<tr><td>cabello</td><td><b>haar</b></td></tr>
+<tr><td>cara</td><td><b>ansik</b></td></tr>
+<tr><td>ojo</td><td><b>aug</b></td></tr>
+<tr><td>oreja</td><td><b>ör</b></td></tr>
+<tr><td>nariz</td><td><b>nas</b></td></tr>
+<tr><td>boca</td><td><b>mun</b></td></tr>
+<tr><td>lengua</td><td><b>tung</b></td></tr>
+<tr><td>diente</td><td><b>tand</b></td></tr>
+<tr><td>cuello</td><td><b>hals</b></td></tr>
+<tr><td>hombro</td><td><b>skuld</b></td></tr>
+<tr><td>brazo</td><td><b>arm</b></td></tr>
+<tr><td>mano</td><td><b>hand</b></td></tr>
+<tr><td>dedo</td><td><b>finger</b></td></tr>
+<tr><td>pecho</td><td><b>bröst</b></td></tr>
+<tr><td>espalda</td><td><b>rygg</b></td></tr>
+<tr><td>estómago</td><td><b>magk</b></td></tr>
+<tr><td>pierna</td><td><b>bein</b></td></tr>
+<tr><td>rodilla</td><td><b>kne</b></td></tr>
+<tr><td>pie</td><td><b>fot</b></td></tr>
+<tr><td>dedo del pie</td><td><b>fotfinger</b></td></tr>
+</table></section>
+
+<section><h2>50. Partes internas</h2>
+<table><tr><th>Español</th><th>Whikson</th></tr>
+<tr><td>corazón</td><td><b>hert</b></td></tr>
+<tr><td>pulmón</td><td><b>lunge</b></td></tr>
+<tr><td>cerebro</td><td><b>hjern</b></td></tr>
+<tr><td>sangre</td><td><b>blod</b></td></tr>
+<tr><td>hueso</td><td><b>beinok</b></td></tr>
+<tr><td>piel</td><td><b>hud</b></td></tr>
+</table></section>
+
+<section><h2>51. Sensaciones y movimientos</h2>
+<div class="grid">
+<div class="card"><b>smil</b><br>sonreír</div>
+<div class="card"><b>gråt</b><br>llorar</div>
+<div class="card"><b>seht</b><br>mirar / ver</div>
+<div class="card"><b>hör</b><br>escuchar / oír</div>
+<div class="card"><b>touch</b><br>tocar</div>
+<div class="card"><b>gå</b><br>caminar</div>
+<div class="card"><b>lauf</b><br>correr</div>
+<div class="card"><b>sit</b><br>sentarse</div>
+<div class="card"><b>stand</b><br>estar de pie</div>
+<div class="card"><b>sleep</b><br>dormir</div>
+</div></section>
+
+<section><h2>52. Expresiones corporales</h2>
+<p>El Whikson también puede describir gestos y estados corporales:</p>
+<div class="grid">
+<div class="card"><b>warm hert</b><br>corazón cálido → persona cariñosa.</div>
+<div class="card"><b>cold hand</b><br>mano fría → expresión de preocupación o nervios.</div>
+<div class="card"><b>low hauk</b><br>cabeza baja → tristeza o respeto.</div>
+<div class="card"><b>wide aug</b><br>ojos muy abiertos → sorpresa.</div>
+</div></section>
+
+<section><h2>53. Frases del cuerpo</h2>
+<div class="code">Ik hav kalt hand. — Tengo la mano fría.<br>
+Min hert is warm. — Mi corazón está cálido.<br>
+He hurts sin kne. — Le duele la rodilla.<br>
+She wash't de hand. — Ella se lava la mano.<br>
+Ik seht with min aug. — Yo veo con mi ojo.<br>
+De Dogsh has four bein. — El perro tiene cuatro patas.</div></section>
+
+<section><h2>54. Regla de vocabulario corporal</h2>
+<p>Las partes básicas del cuerpo conservan raíces cortas y antiguas. Los términos médicos o técnicos pueden utilizar formas compuestas. Por ejemplo, <b>hert</b> significa corazón y una palabra técnica futura puede combinar <b>hert</b> con otra raíz para especificar una función o enfermedad.</p>
+</section>
+
+<footer>WHIKSON · The Mountain Tongue · Proyecto de lengua ficticia</footer>
+</body></html>
